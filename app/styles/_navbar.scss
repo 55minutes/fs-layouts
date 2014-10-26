@@ -4,10 +4,12 @@
   justify-content: space-between;
 
   ul {
-    list-style: none;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
+    list-style: none;
     padding-left: 0;
+    text-transform: lowercase;
 
     li {
       padding-left: 20px;
@@ -17,6 +19,19 @@
 
   a {
     text-decoration: none;
+  }
+}
+
+.navbar-nav {
+  flex-grow: 2;
+}
+
+.navbar-brand {
+  padding: 25px 0 25px 2%;
+  flex-grow: 1;
+
+  img {
+    width: 230px;
   }
 }
 

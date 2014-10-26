@@ -14,7 +14,7 @@ function configRoute($routeProvider) {
 
 function MainController($scope) {
   $scope.data = {
-    displaySidebar: true
+    displaySidebar: false
   };
 }
 
