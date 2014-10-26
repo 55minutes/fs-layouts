@@ -1,6 +1,0 @@
-{
-  "name": "fs-layouts",
-  "dependencies": {
-    "neat": "~1.7.0"
-  }
-}
