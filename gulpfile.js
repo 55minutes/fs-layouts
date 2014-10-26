@@ -176,6 +176,12 @@ gulp.task('default', ['clean'], function (cb) {
   runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
 });
 
+// Deploy to gh-pages
+gulp.task('deploy', ['default'], function () {
+  return gulp.src('./dist/**/*')
+  .pipe($.ghPages());
+});
+
 // Run PageSpeed Insights
 // Update `url` below to the public URL for your site
 gulp.task('pagespeed', pagespeed.bind(null, {
