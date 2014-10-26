@@ -179,7 +179,9 @@ gulp.task('default', ['clean'], function (cb) {
 // Deploy to gh-pages
 gulp.task('deploy', ['default'], function () {
   return gulp.src('./dist/**/*')
-  .pipe($.ghPages());
+  .pipe($.ghPages({
+    cacheDir: '.deploy-git'
+  }));
 });
 
 // Run PageSpeed Insights
