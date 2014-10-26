@@ -11,6 +11,8 @@
   <ul class="navbar-nav navbar-right">
     <li><a href="#">My Orders</a></li>
     <li><a href="#">Profile</a></li>
-    <li><a href="#">Cart</a></li>
+    <li ng-if="!data.displaySidebar">
+      <a ng-click="data.displaySidebar=!data.displaySidebar">Cart</a>
+    </li>
   </ul>
 </nav>

@@ -30,14 +30,12 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body ng-controller="MainController">
-    <div id="sidebar" ng-if="displaySidebar">
-      Hi
+    <div id="sidebar" ng-if="data.displaySidebar">
+      <ng-include src="'components/sidebar/sidebar.html'"></ng-include>
     </div>
 
     <div>
-      <div>
-        <ng-include src="'components/nav/nav.html'"></ng-include>
-      </div>
+      <ng-include src="'components/nav/nav.html'"></ng-include>
       <main ng-view></main>
     </div>
 

@@ -13,7 +13,9 @@ function configRoute($routeProvider) {
 }
 
 function MainController($scope) {
-  $scope.displaySidebar = true;
+  $scope.data = {
+    displaySidebar: true
+  };
 }
 
 })(window, window.angular);
