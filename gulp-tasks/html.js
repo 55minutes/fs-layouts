@@ -12,6 +12,7 @@ gulp.task('html', function () {
   return gulp.src('app/**/*.html')
     .pipe(assets)
     // Concatenate And Minify JavaScript
+    .pipe($.if('*.js', $.ngAnnotate()))
     .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
     // Remove Any Unused CSS
     // Note: If not using the Style Guide, you can delete it from
@@ -35,7 +36,9 @@ gulp.task('html', function () {
     // Update Production Style Guide Paths
     .pipe($.replace('components/components.css', 'components/main.min.css'))
     // Minify Any HTML
-    .pipe($.if('*.html', $.minifyHtml()))
+    .pipe($.if('*.html', $.minifyHtml({
+      empty: true
+    })))
     // Output Files
     .pipe(gulp.dest('dist'))
     .pipe($.size({title: 'html'}));
