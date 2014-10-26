@@ -29,9 +29,17 @@
     <!-- Page styles -->
     <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body>
+  <body ng-controller="MainController">
+    <div id="sidebar" ng-if="displaySidebar">
+      Hi
+    </div>
 
-    <main ng-view></main>
+    <div>
+      <div>
+        <ng-include src="'components/nav/nav.html'"></ng-include>
+      </div>
+      <main ng-view></main>
+    </div>
 
     <!-- build:js scripts/main.min.js -->
     <script src="angular/angular.js"></script>

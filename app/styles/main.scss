@@ -1,5 +1,9 @@
-@import '_h5bp';
-@import '_flexbox';
+@import 'h5bp';
+
+@import 'layout';
+
+@import 'flexbox';
+@import 'navbar';
 
 body {
   margin: 0;
