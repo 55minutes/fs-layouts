@@ -7,7 +7,9 @@ var gulp = require('gulp');
 
 // Scan Your HTML For Assets & Optimize Them
 gulp.task('html', function () {
-  var assets = $.useref.assets({searchPath: '{.tmp,app,node_modules}'});
+  var assets = $.useref.assets({
+    searchPath: '{.tmp,app,node_modules,bower_components}'
+  });
 
   return gulp.src('app/**/*.html')
     .pipe(assets)
@@ -21,11 +23,6 @@ gulp.task('html', function () {
       html: [
         'app/index.html',
         'app/styleguide.html'
-      ],
-      // CSS Selectors for UnCSS to ignore
-      ignore: [
-        /.navdrawer-container.open/,
-        /.app-bar.open/
       ]
     })))
     // Concatenate And Minify Styles

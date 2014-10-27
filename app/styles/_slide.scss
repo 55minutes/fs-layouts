@@ -17,7 +17,7 @@
 }
 
 .slide-icon.ng-enter {
-  transform: translateX(88px);
+  transform: translateX(65px);
   transition: transform .3s ease-in-out;
 
   &.ng-enter-active {
@@ -30,6 +30,6 @@
   transition: transform .3s ease-in-out;
 
   &.ng-leave-active {
-    transform: translateX(88px);
+    transform: translateX(65px);
   }
 }

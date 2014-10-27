@@ -2,8 +2,9 @@
 
 'use strict';
 
-angular.module('orderApp', ['ngAnimate', 'ngRoute'])
+angular.module('orderApp', ['ngAnimate', 'ngRoute', 'snap'])
 .config(configRoute)
+.config(configSnap)
 .controller('MainController', MainController);
 
 function configRoute($routeProvider) {
@@ -18,6 +19,13 @@ function configRoute($routeProvider) {
   $routeProvider.otherwise({
     redirectTo: '/products'
   });
+}
+
+function configSnap(snapRemoteProvider) {
+  snapRemoteProvider.globalOptions = {
+    disable: 'left',
+    touchToDrag: false
+  };
 }
 
 function MainController($scope) {
