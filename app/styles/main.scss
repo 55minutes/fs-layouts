@@ -1,5 +1,7 @@
 @import 'h5bp';
 
+@import 'fonts.css';
+
 @import 'layout';
 
 @import 'flexbox';
@@ -8,9 +10,8 @@
 @import 'slide';
 
 body {
-  font-family: HelveticaNeue;
-  font-size: 20px;
-  font-weight: bold;
+  font-family: 'HelveticaNeueLT-Bold';
+  font-size: 16px;
   margin: 0;
-  min-width: 1100px;
+  min-width: 985px;
 }

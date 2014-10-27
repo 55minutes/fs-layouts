@@ -2,37 +2,34 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 16px;
+}
 
-  ul {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding-left: 0;
-    text-transform: lowercase;
+.navbar-nav {
+  align-items: center;
+  display: flex;
+  flex-grow: 2;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  text-transform: lowercase;
 
-    li {
-      padding-left: 20px;
-
-    }
+  li {
+    padding-left: 20px;
   }
 
   a {
+    color: #9b9b9b;
     text-decoration: none;
   }
 }
 
-.navbar-nav {
-  flex-grow: 2;
-}
-
 .navbar-brand {
-  padding: 25px 12px 25px 25px;
   flex-grow: 1;
   max-width: 180px;
 }
 
 .navbar-right {
   justify-content: flex-end;
-  padding-right: 25px;
 }
