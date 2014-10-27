@@ -27,14 +27,12 @@
 }
 
 .navbar-brand {
-  padding: 25px 0 25px 2%;
+  padding: 25px 12px 25px 25px;
   flex-grow: 1;
-
-  img {
-    width: 230px;
-  }
+  max-width: 180px;
 }
 
 .navbar-right {
   justify-content: flex-end;
+  padding-right: 25px;
 }
