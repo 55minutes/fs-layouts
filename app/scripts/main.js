@@ -2,13 +2,21 @@
 
 'use strict';
 
-angular.module('orderApp', ['ngRoute'])
+angular.module('orderApp', ['ngAnimate', 'ngRoute'])
 .config(configRoute)
 .controller('MainController', MainController);
 
 function configRoute($routeProvider) {
   $routeProvider.when('/', {
+    redirectTo: '/products'
+  });
+
+  $routeProvider.when('/products', {
     templateUrl: 'sections/product/overview.html'
+  });
+
+  $routeProvider.otherwise({
+    redirectTo: '/products'
   });
 }
 

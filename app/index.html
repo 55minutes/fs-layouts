@@ -33,17 +33,19 @@
     rel="stylesheet">
   </head>
   <body ng-controller="MainController">
-    <div id="sidebar" ng-if="data.displaySidebar">
+    <div id="sidebar" ng-if="data.displaySidebar" class="slide">
       <ng-include src="'components/sidebar/sidebar.html'"></ng-include>
     </div>
 
-    <div>
+    <div id="main-content">
       <ng-include src="'components/nav/nav.html'"></ng-include>
       <main ng-view></main>
     </div>
 
     <!-- build:js scripts/main.min.js -->
     <script src="angular/angular.js"></script>
+
+    <script src="angular-animate/angular-animate.js"></script>
     <script src="angular-route/angular-route.js"></script>
 
     <script src="scripts/main.js"></script>

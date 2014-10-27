@@ -6,13 +6,16 @@
 .flex-item {
   background-color: red;
   border: 1px solid white;
-  flex: 1 0 250px;
+  flex: 1 0 300px;
+}
+
+.flex-item-blank {
+  background-color: inherit;
 }
 
 .flex-item-double {
   background-color: blue;
-  border: 1px solid white;
-  flex: 2 0 500px;
+  flex: 2 0 600px;
 }
 
 .tall {
