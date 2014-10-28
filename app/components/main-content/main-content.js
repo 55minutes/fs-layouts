@@ -7,8 +7,8 @@ angular.module('mainContent', [])
 
 function reflow(width) {
   var basis = 100 / Math.floor(width / 320);
-  $('.flex-item').css('flex', '0 0 ' + basis + '%');
-  $('.flex-item-double').css('flex', '0 0 ' + basis * 2 + '%');
+  $('.tile').css('flex', '0 0 ' + basis + '%');
+  $('.tile-2x').css('flex', '0 0 ' + basis * 2 + '%');
 }
 
 function MainContentController($scope) {

@@ -1,9 +1,9 @@
-.flex-container {
+.tile-container {
   display: flex;
   flex-flow: row wrap;
 }
 
-.flex-item {
+.tile {
   background-color: red;
   display: flex;
   flex-flow: column nowrap;
@@ -17,12 +17,7 @@
   }
 }
 
-.flex-item-blank {
-  background-color: inherit;
-}
-
-.flex-item-double {
+.tile-2x {
   background-color: blue;
   flex: 0 0 66.66%;
-  min-height: 200px;
 }
