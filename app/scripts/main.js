@@ -2,10 +2,15 @@
 
 'use strict';
 
-angular.module('orderApp', ['ngAnimate', 'ngRoute', 'snap'])
+angular.module('orderApp', [
+  'ngAnimate', 'ngRoute',
+
+  'snap',
+
+  'topNavBar'
+])
 .config(configRoute)
-.config(configSnap)
-.controller('MainController', MainController);
+.config(configSnap);
 
 function configRoute($routeProvider) {
   $routeProvider.when('/', {
@@ -24,13 +29,8 @@ function configRoute($routeProvider) {
 function configSnap(snapRemoteProvider) {
   snapRemoteProvider.globalOptions = {
     disable: 'left',
+    minPosition: -320,
     touchToDrag: false
-  };
-}
-
-function MainController($scope) {
-  $scope.data = {
-    displaySidebar: false
   };
 }
 

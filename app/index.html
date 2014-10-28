@@ -32,23 +32,26 @@
     href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
     rel="stylesheet">
   </head>
-  <body ng-controller="MainController">
+  <body>
     <div snap-drawer="right">
-      <p>Tools go here</p>
+      <h1>Edit Panel Can Go Wider?</h1>
     </div>
 
     <div snap-content>
-      <div id="sidebar" ng-if="data.displaySidebar" class="slide">
-        <ng-include src="'components/sidebar/sidebar.html'"></ng-include>
-      </div>
+      <div id="main">
+        <div id="content">
+          <ng-include src="'components/nav/nav.html'"></ng-include>
+          <main ng-view></main>
+        </div>
 
-      <div id="main-content">
-        <ng-include src="'components/nav/nav.html'"></ng-include>
-        <main ng-view></main>
+        <div id="cart">
+          <ng-include src="'components/cart/cart.html'"></ng-include>
+        </div>
       </div>
     </div>
 
     <!-- build:js scripts/main.min.js -->
+    <script src="jquery/dist/jquery.js"></script>
     <script src="snapjs/snap.js"></script>
 
     <script src="angular/angular.js"></script>
@@ -58,6 +61,7 @@
     <script src="angular-snap/angular-snap.js"></script>
 
     <script src="scripts/main.js"></script>
+    <script src="components/nav/nav.js"></script>
     <!-- endbuild -->
 
   </body>

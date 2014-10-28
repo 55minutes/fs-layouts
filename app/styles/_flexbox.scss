@@ -6,19 +6,23 @@
 .flex-item {
   background-color: red;
   border: 1px solid white;
+  display: flex;
+  flex-flow: column nowrap;
   flex: 1 0 300px;
+  justify-content: flex-end;
+  padding: 10px;
+
+  p {
+    margin: 0;
+  }
 }
 
 .flex-item-blank {
   background-color: inherit;
+  padding: 0;
 }
 
 .flex-item-double {
   background-color: blue;
   flex: 2 0 600px;
-}
-
-.tall {
-  background-color: green;
-  height: 100px;
 }

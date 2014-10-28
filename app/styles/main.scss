@@ -7,8 +7,6 @@
 
 @import 'flexbox';
 @import 'navbar';
-@import 'sidebar';
-@import 'slide';
 
 body {
   font-family: 'HelveticaNeueLT-Bold';
@@ -16,7 +14,8 @@ body {
   margin: 0;
 }
 
-.snap-content {
-  background-color: white;
-  min-width: 985px;
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+  cursor: pointer;
 }
