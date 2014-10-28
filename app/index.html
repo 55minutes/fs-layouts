@@ -39,7 +39,7 @@
 
     <div snap-content>
       <div id="main">
-        <div id="content">
+        <div id="main-content">
           <ng-include src="'components/nav/nav.html'"></ng-include>
           <main ng-view></main>
         </div>
@@ -52,6 +52,8 @@
 
     <!-- build:js scripts/main.min.js -->
     <script src="jquery/dist/jquery.js"></script>
+
+    <script src="jquery-watch/dist/jquery-watch.js"></script>
     <script src="snapjs/snap.js"></script>
 
     <script src="angular/angular.js"></script>
@@ -61,6 +63,8 @@
     <script src="angular-snap/angular-snap.js"></script>
 
     <script src="scripts/main.js"></script>
+
+    <script src="components/main-content/main-content.js"></script>
     <script src="components/nav/nav.js"></script>
     <!-- endbuild -->
 

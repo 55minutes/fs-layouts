@@ -7,6 +7,7 @@ angular.module('orderApp', [
 
   'snap',
 
+  'mainContent',
   'topNavBar'
 ])
 .config(configRoute)
@@ -18,6 +19,7 @@ function configRoute($routeProvider) {
   });
 
   $routeProvider.when('/products', {
+    controller: 'MainContentController',
     templateUrl: 'sections/product/overview.html'
   });
 

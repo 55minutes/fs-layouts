@@ -9,7 +9,8 @@
   ],
   "dependencies": {
     "angular-snap": "~1.6.0",
-    "angular": "~1.3.0"
+    "angular": "~1.3.0",
+    "jquery-watch": "git@github.com:RickStrahl/jquery-watch.git"
   },
   "resolutions": {
     "angular": "~1.3.0"
