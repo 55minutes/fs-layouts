@@ -2,6 +2,7 @@
   <div class="tile" ng-repeat="product in products"
     ng-controller="TileController" ng-init="backgroundColor =
     product.backgroundColor" ng-style="{'background-color': backgroundColor}"
+    ng-click="$location.path('/product-detail')"
     ng-mouseover="tileBackgroundColor(product.backgroundColorHover)"
     ng-mouseleave="tileBackgroundColor(product.backgroundColor)">
 

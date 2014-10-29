@@ -23,6 +23,10 @@ function configRoute($routeProvider) {
     templateUrl: 'sections/product/overview.html'
   });
 
+  $routeProvider.when('/product-detail', {
+    templateUrl: 'sections/product/detail.html'
+  });
+
   $routeProvider.otherwise({
     redirectTo: '/products'
   });

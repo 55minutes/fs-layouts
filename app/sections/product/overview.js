@@ -19,7 +19,8 @@ function initialReflow(reflow) {
   observer.observe(target, config);
 }
 
-function ProductOverviewController($scope, fixtures, reflow) {
+function ProductOverviewController($location, $scope, fixtures, reflow) {
+  $scope.$location = $location;
   $scope.products = fixtures.products;
 
   reflow.register();
