@@ -4,20 +4,39 @@
 }
 
 .tile {
-  background-color: red;
+  flex: 0 0 33%;
+
+  align-items: flex-start;
   display: flex;
   flex-flow: column nowrap;
-  flex: 0 0 33.33%;
   justify-content: flex-end;
+
+  &>* {
+    padding-left: 32px;
+  }
+
+  *:last-child {
+    padding-bottom: 16px;
+  }
+
+  img {
+    margin-bottom: 1.5em;
+  }
 
   p {
     color: white;
     font-size: 32px;
+    line-height: 1.4em;
     margin: 0;
+    text-transform: lowercase;
   }
+}
+
+.tile-muted {
+  opacity: 0.65;
 }
 
 .tile-2x {
   background-color: blue;
-  flex: 0 0 66.66%;
+  flex: 0 0 66%;
 }
