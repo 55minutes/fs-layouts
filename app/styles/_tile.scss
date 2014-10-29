@@ -4,6 +4,7 @@
 }
 
 .tile {
+  cursor: pointer;
   flex: 0 0 33%;
   transition: background .3s, flex .4s;
 
