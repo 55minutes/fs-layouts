@@ -2,7 +2,7 @@
 
 'use strict';
 
-angular.module('productOverview', ['fixtures', 'reflow'])
+angular.module('productOverview', ['fixtures', 'reflow', 'tile'])
 .controller('ProductOverviewController', ProductOverviewController);
 
 function initialReflow(reflow) {
@@ -20,14 +20,6 @@ function initialReflow(reflow) {
 }
 
 function ProductOverviewController($scope, fixtures, reflow) {
-  $scope.tileHover = function(e, color) {
-    $(e.target).css('background-color', color);
-  };
-
-  $scope.stop = function(e) {
-    e.stopPropagation();
-  }
-
   $scope.products = fixtures.products;
 
   reflow.register();

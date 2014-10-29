@@ -1,18 +1,14 @@
 <div class="tile-container">
-  <div ng-repeat="product in products" class="tile"
-    ng-style="{'background-color': product.backgroundColor}"
-    ng-mouseover="tileHover($event, product.backgroundColorHover)"
-    ng-mouseleave="tileHover($event, product.backgroundColor)">
+  <div class="tile" ng-repeat="product in products"
+    ng-controller="TileController" ng-init="backgroundColor =
+    product.backgroundColor" ng-style="{'background-color': backgroundColor}"
+    ng-mouseover="tileBackgroundColor(product.backgroundColorHover)"
+    ng-mouseleave="tileBackgroundColor(product.backgroundColor)">
 
-    <img ng-src="images/products/{{ ::product.image }}"
-    ng-mouseover="stop($event)" ng-mouseleave="stop($event)">
-    <p ng-mouseover="stop($event)"
-      ng-mouseleave="stop($event)">{{ ::product.name }}</p>
-    <p class="tile-muted" ng-mouseover="stop($event)"
-      ng-mouseleave="stop($event)">{{ ::product.type }}</p>
-    <p class="tile-muted" ng-mouseover="stop($event)"
-      ng-mouseleave="stop($event)">{{ ::product.height }}×{{
-      ::product.width}}</p>
+    <img ng-src="images/products/{{ ::product.image }}" />
+    <p>{{ ::product.name }}</p>
+    <p class="tile-muted">{{ ::product.type }}</p>
+    <p class="tile-muted">{{ ::product.height }}×{{ ::product.width}}</p>
 
   </div>
 </div>
