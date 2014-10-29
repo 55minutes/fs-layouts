@@ -15,7 +15,7 @@ function fixtures() {
       width: 3.5,
       image: 'business-card_slim.png',
       backgroundColor: '#f5ca26',
-      backgroundColorHover: '#dcb522',
+      backgroundColorHover: '#666',
     }, {
       name: 'Business Card',
       type: 'Classic',
@@ -23,7 +23,7 @@ function fixtures() {
       width: 3.5,
       image: 'business-card_classic.png',
       backgroundColor: '#ffbe1d',
-      backgroundColorHover: '#e5aa1a',
+      backgroundColorHover: '#666',
     }, {
       name: 'Business Card',
       type: 'Rounded',
@@ -31,7 +31,7 @@ function fixtures() {
       width: 3.5,
       image: 'business-card_rounded.png',
       backgroundColor: '#ffb111',
-      backgroundColorHover: '#e59f0f',
+      backgroundColorHover: '#666',
     }, {
       name: 'Postcard',
       type: 'Classic',
@@ -39,7 +39,7 @@ function fixtures() {
       width: 6,
       image: 'postcard_classic.png',
       backgroundColor: '#fd7e00',
-      backgroundColorHover: '#e37100',
+      backgroundColorHover: '#666',
     }, {
       name: 'Postcard',
       type: 'Medium',
@@ -47,7 +47,7 @@ function fixtures() {
       width: 7,
       image: 'postcard_medium.png',
       backgroundColor: '#ef6a21',
-      backgroundColorHover: '#d65f1d',
+      backgroundColorHover: '#666',
     }];
 
     return factory;
