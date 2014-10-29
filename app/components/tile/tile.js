@@ -1,6 +1,6 @@
 (function(window, angular) {
 
-"use strict";
+'use strict';
 
 angular.module('tile', [])
 .controller('TileController', TileController);
