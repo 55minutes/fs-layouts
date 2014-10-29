@@ -5,6 +5,7 @@
 
 .tile {
   flex: 0 0 33%;
+  transition: background .3s, flex .4s;
 
   align-items: flex-start;
   display: flex;
