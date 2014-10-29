@@ -1,0 +1,40 @@
+.detail {
+  background-color: #7321a2;
+  color: white;
+  min-height: 100vh;
+}
+
+.detail-header-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 3.5rem;
+}
+
+.detail-header, .detail-info {
+  padding: 2rem 1rem 0;
+}
+
+.detail-header {
+  font-size: 64px;
+
+  p {
+    line-height: 1.2em;
+    margin: 0;
+  }
+}
+
+.detail-header-title {
+  text-transform: lowercase;
+}
+
+.detail-header-desc {
+  font-size: 1rem;
+  max-width: 550px;
+  padding-top: 2rem;
+}
+
+.detail-info {
+  min-width: 270px;
+  padding-right: 4rem;
+}

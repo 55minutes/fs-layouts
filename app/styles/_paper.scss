@@ -1,0 +1,24 @@
+.paper-spec td {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+}
+
+.paper-icon-small {
+  border: 4px solid white;
+  display: flex;
+  font-size: 1.75rem;
+  max-height: 2.75rem;
+  max-width: 2.5rem;
+  min-height: 2.75rem;
+  min-width: 2.5rem;
+  vertical-align: text-bottom;
+  padding-left: .25rem;
+  line-height: 230%;
+}
+
+.paper-desc {
+  padding-left: .5rem;
+  vertical-align: text-bottom;
+}
