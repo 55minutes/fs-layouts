@@ -21,8 +21,9 @@
     </li>
     <li>
       <a ng-click="toggleCart()">
-        <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
+        <span id="cart-toggle" class="fa-stack">
+          <i class="fa fa-circle fa-stack-2x" ng-class="{'navbar-active':
+            showCart}"></i>
           <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
         </span>
       </a>

@@ -7,6 +7,7 @@ angular.module('orderApp', [
 
   'snap',
 
+  'productDetail',
   'productOverview',
   'topNavBar'
 ])
@@ -24,6 +25,7 @@ function configRoute($routeProvider) {
   });
 
   $routeProvider.when('/product-detail', {
+    controller: 'ProductDetailController',
     templateUrl: 'sections/product/detail.html'
   });
 

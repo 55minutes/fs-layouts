@@ -41,7 +41,7 @@
       <div id="main">
         <div id="main-content">
           <ng-include src="'components/nav/nav.html'"></ng-include>
-          <main ng-view></main>
+          <main ng-view autoscroll="true" class="view"></main>
         </div>
 
         <div id="cart">
@@ -68,6 +68,7 @@
     <script src="components/nav/nav.js"></script>
     <script src="components/reflow/reflow.js"></script>
     <script src="components/tile/tile.js"></script>
+    <script src="sections/product/detail.js"></script>
     <script src="sections/product/overview.js"></script>
     <!-- endbuild -->
 

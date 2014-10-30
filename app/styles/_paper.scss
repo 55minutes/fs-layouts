@@ -1,24 +1,27 @@
-.paper-spec td {
-  &:not(:last-child) {
-    margin-bottom: 1rem;
+.paper-spec {
+  .paper-item:not(:last-child) {
+    padding-bottom: 1.5rem;
   }
+}
 
+.paper-item {
+  align-items: flex-end;
+  display: flex;
 }
 
 .paper-icon-small {
   border: 4px solid white;
-  display: flex;
-  font-size: 1.75rem;
-  max-height: 2.75rem;
-  max-width: 2.5rem;
-  min-height: 2.75rem;
-  min-width: 2.5rem;
-  vertical-align: text-bottom;
-  padding-left: .25rem;
+  box-sizing: border-box;
+  font-size: 28px;
   line-height: 230%;
+  max-height: 52px;
+  max-width: 52px;
+  min-height: 52px;
+  min-width: 52px;
+  padding-left: .25rem;
 }
 
 .paper-desc {
   padding-left: .5rem;
-  vertical-align: text-bottom;
+  padding-bottom: .1rem;
 }

@@ -2,15 +2,15 @@
 
 'use strict';
 
-angular.module('productOverview', ['fixtures', 'reflow', 'tile'])
-.controller('ProductOverviewController', ProductOverviewController);
+angular.module('productDetail', ['reflow'])
+.controller('ProductDetailController', ProductDetailController);
 
 function initialReflow(reflow) {
   var target = document.querySelector('main');
 
   var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-      reflow.products.reflow($('#main-content').width());
+      reflow.productDetail.reflow($('#main-content').width());
     });
   });
 
@@ -19,12 +19,19 @@ function initialReflow(reflow) {
   observer.observe(target, config);
 }
 
-function ProductOverviewController($location, $scope, fixtures, reflow) {
+function ProductDetailController($location, $scope, reflow) {
   $scope.$location = $location;
-  $scope.products = fixtures.products;
 
-  reflow.products.register();
+  $scope.pulseCart = function() {
+    $('#cart-toggle').addClass('animated pulse');
+    $('#cart-toggle').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+      $('#cart-toggle').removeClass('animated pulse');
+    });
+  };
+
+  reflow.productDetail.register();
   initialReflow(reflow);
+  reflow.productDetail.reflow($('#main-content').width());
 }
 
 })(window, window.angular, window.jQuery);

@@ -4,19 +4,39 @@
   min-height: 100vh;
 }
 
+.detail-control {
+  cursor: pointer;
+  float: right;
+  opacity: 0.6;
+  padding: 1em;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  a {
+    color: white;
+  }
+}
+
 .detail-header-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 3.5rem;
+  padding: 3.5rem 3rem 0;
+}
+
+.detail-pricing {
+  padding: 3.5rem 3rem 0;
 }
 
 .detail-header, .detail-info {
-  padding: 2rem 1rem 0;
+  min-width: 540px;
 }
 
 .detail-header {
   font-size: 64px;
+  padding-right: 2rem;
 
   p {
     line-height: 1.2em;
@@ -36,5 +56,8 @@
 
 .detail-info {
   min-width: 270px;
-  padding-right: 4rem;
+
+  p {
+    margin-top: 0;
+  }
 }

@@ -6,13 +6,14 @@ angular.module('topNavBar', [])
 .controller('TopNavController', TopNavController);
 
 function TopNavController($scope) {
-  var showCart = false;
   var cart = $('#cart');
 
-  $scope.toggleCart = function() {
-    showCart = !showCart;
+  $scope.showCart = false;
 
-    if (showCart) {
+  $scope.toggleCart = function() {
+    $scope.showCart = !$scope.showCart;
+
+    if ($scope.showCart) {
       cart.animate({
         minWidth: '+=320'
       }, 300);

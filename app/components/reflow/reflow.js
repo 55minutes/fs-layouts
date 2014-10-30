@@ -34,11 +34,23 @@ function reflow() {
 
   factory.productDetail = {};
 
+  factory.productDetail.reflow = function(width) {
+    if (width <= 940) {
+      $('.detail-header-section').css('flex-wrap', 'wrap');
+    } else {
+      $('.detail-header-section').css('flex-wrap', 'nowrap');
+    }
+  };
+
   factory.productDetail.register = function() {
+    $(window).bind('resize', function() {
+      factory.productDetail.reflow(content.width());
+    });
+
     cart.watch({
       properties: 'width',
       callback: function(data, i) {
-        factory.reflow(content.width());
+        factory.productDetail.reflow(content.width());
       }
     });
   };
