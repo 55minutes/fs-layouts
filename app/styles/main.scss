@@ -10,6 +10,7 @@
 @import 'navbar';
 @import 'paper';
 @import 'price';
+@import 'promo';
 @import 'tile';
 @import 'view';
 
@@ -19,7 +20,11 @@ body {
   margin: 0;
 }
 
-[ng-click],
+button {
+  font-family: 'HelveticaNeueLT-Bold';
+}
+
+button, [ng-click],
 [data-ng-click],
 [x-ng-click] {
   cursor: pointer;

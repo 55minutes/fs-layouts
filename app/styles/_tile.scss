@@ -13,19 +13,6 @@
   flex-flow: column nowrap;
   justify-content: flex-end;
 
-  &>* {
-    padding-left: 2rem;
-  }
-
-  *:last-child {
-    padding-bottom: 1rem;
-  }
-
-  img {
-    margin-top: 3rem;
-    margin-bottom: 1.5em;
-  }
-
   p {
     color: white;
     font-size: 32px;
@@ -35,11 +22,14 @@
   }
 }
 
-.tile-muted {
-  opacity: 0.65;
+.tile-2x {
+  flex: 0 0 66%;
 }
 
-.tile-2x {
-  background-color: blue;
-  flex: 0 0 66%;
+.tile-inner {
+  padding: 3rem 2rem 1rem;
+}
+
+.tile-image {
+  margin-bottom: 1.5em;
 }

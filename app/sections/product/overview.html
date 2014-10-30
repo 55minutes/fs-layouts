@@ -6,10 +6,23 @@
     ng-mouseover="tileBackgroundColor(product.backgroundColorHover)"
     ng-mouseleave="tileBackgroundColor(product.backgroundColor)">
 
-    <img ng-src="images/products/{{ ::product.image }}" />
-    <p>{{ ::product.name }}</p>
-    <p class="muted">{{ ::product.type }}</p>
-    <p class="muted">{{ ::product.height }}×{{ ::product.width}}</p>
+    <div class="tile-inner">
+      <img ng-src="images/products/{{ ::product.image }}" class="tile-image" />
+      <p>{{ ::product.name }}</p>
+      <p class="muted">{{ ::product.type }}</p>
+      <p class="muted">{{ ::product.height }}×{{ ::product.width}}</p>
+    </div>
 
+  </div>
+  <div class="tile tile-2x promo">
+    <div class="tile-inner">
+      <p>Get our free sample kit.</p>
+      <p class="muted">
+        Et per essent nominavi democritum, esse mandamus deterruisset an has.
+        His ea eros gubergren, insolens corrumpit eu has.
+      </p>
+      <button type="button" class="promo-button muted">order the kit</button>
+      <img src="images/sample-kit-icon.png" class="promo-image-right" />
+    </div>
   </div>
 </div>
