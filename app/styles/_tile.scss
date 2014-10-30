@@ -7,15 +7,22 @@
   cursor: pointer;
   flex: 0 0 33%;
   transition: background .3s;
-  box-sizing: border-box;
-  padding: 2rem;
 
   align-items: flex-start;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
 
+  &>* {
+    padding-left: 2rem;
+  }
+
+  *:last-child {
+    padding-bottom: 1rem;
+  }
+
   img {
+    margin-top: 3rem;
     margin-bottom: 1.5em;
   }
 
