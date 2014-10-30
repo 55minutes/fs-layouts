@@ -17,6 +17,7 @@ function reflow() {
     var basis = 100 / Math.floor(width / 320);
     $('.tile').css('flex', '0 0 ' + basis + '%');
     $('.tile-2x').css('flex', '0 0 ' + basis * 2 + '%');
+    $('.snap-content').css('background-color', 'white');
   };
 
   factory.products.register = function() {
@@ -34,11 +35,8 @@ function reflow() {
 
   factory.productDetail = {};
 
-  factory.productDetail.reflow = function(width) {
-    // Calculate the height we need to fill
-    var vh = $(window).height();
-    var offset = $('.detail').offset().top;
-    $('.detail').css('min-height', vh - offset);
+  factory.productDetail.reflow = function(width, bgColor) {
+    $('.snap-content').css('background-color', bgColor);
 
     // Reflow the header section
     if (width <= 940) {
@@ -60,15 +58,15 @@ function reflow() {
     }
   };
 
-  factory.productDetail.register = function() {
+  factory.productDetail.register = function(bgColor) {
     $(window).bind('resize', function() {
-      factory.productDetail.reflow(content.width());
+      factory.productDetail.reflow(content.width(), bgColor);
     });
 
     cart.watch({
       properties: 'width',
       callback: function(data, i) {
-        factory.productDetail.reflow(content.width());
+        factory.productDetail.reflow(content.width(), bgColor);
       }
     });
   };
