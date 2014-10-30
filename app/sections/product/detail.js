@@ -5,33 +5,25 @@
 angular.module('productDetail', ['reflow'])
 .controller('ProductDetailController', ProductDetailController);
 
-function initialReflow(reflow) {
-  var target = document.querySelector('main');
-
-  var observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      reflow.productDetail.reflow($('#main-content').width());
-    });
-  });
-
-  var config = {childList: true, subtree: true};
-
-  observer.observe(target, config);
-}
-
-function ProductDetailController($location, $scope, reflow) {
+function ProductDetailController($location, $scope, $timeout, reflow) {
   $scope.$location = $location;
 
   $scope.pulseCart = function() {
     $('#cart-toggle').addClass('animated pulse');
-    $('#cart-toggle').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+    $('#cart-toggle').one(
+      'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
+      function() {
       $('#cart-toggle').removeClass('animated pulse');
     });
   };
 
+  $scope.$on('$viewContentLoaded', function(){
+    $timeout(function() {
+      reflow.productDetail.reflow($('#main-content').width());
+    }, 400);
+  });
+
   reflow.productDetail.register();
-  initialReflow(reflow);
-  reflow.productDetail.reflow($('#main-content').width());
 }
 
 })(window, window.angular, window.jQuery);

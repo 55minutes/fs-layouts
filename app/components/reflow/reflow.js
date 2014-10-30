@@ -35,6 +35,12 @@ function reflow() {
   factory.productDetail = {};
 
   factory.productDetail.reflow = function(width) {
+    // Calculate the height we need to fill
+    var vh = $(window).height();
+    var offset = $('.detail').offset().top;
+    $('.detail').css('min-height', vh - offset);
+
+    // Reflow the header section
     if (width <= 940) {
       $('.detail-header-section').css('flex-wrap', 'wrap');
     } else {
