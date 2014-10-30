@@ -6,20 +6,14 @@
 .tile {
   cursor: pointer;
   flex: 0 0 33%;
-  transition: background .3s, flex .4s;
+  transition: background .3s;
+  box-sizing: border-box;
+  padding: 2rem;
 
   align-items: flex-start;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-end;
-
-  &>* {
-    padding-left: 32px;
-  }
-
-  *:last-child {
-    padding-bottom: 16px;
-  }
 
   img {
     margin-bottom: 1.5em;
