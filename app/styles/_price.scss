@@ -1,5 +1,6 @@
 .price-grid {
-  font-size: 20px;
+  font-size: 1.25rem;
+  transition: all .3s;
   width: 100%;
 
   thead {
@@ -16,7 +17,6 @@
     td {
       cursor: pointer;
       opacity: 0.6;
-      padding-left: 2rem;
       text-align: right;
       width: 14.3%;
       transition: opacity .3s;
@@ -28,7 +28,7 @@
           content: "\f07a";
           font-family: FontAwesome;
           font-size: .9em;
-          padding-right: .5rem;
+          padding-right: .5em;
         }
       }
     }

@@ -40,6 +40,18 @@ function reflow() {
     } else {
       $('.detail-header-section').css('flex-wrap', 'nowrap');
     }
+
+    if (width <= 660) {
+      $('.price-grid').css('font-size', '.7rem');
+    } else if (width <= 760) {
+      $('.price-grid').css('font-size', '.8rem');
+    } else if (width <= 860) {
+      $('.price-grid').css('font-size', '.9rem');
+    } else if (width <= 960) {
+      $('.price-grid').css('font-size', '1rem');
+    } else {
+      $('.price-grid').css('font-size', '1.25rem');
+    }
   };
 
   factory.productDetail.register = function() {
