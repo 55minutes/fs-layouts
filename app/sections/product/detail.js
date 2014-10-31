@@ -11,6 +11,10 @@ function ProductDetailController($location, $scope, $timeout, reflow) {
   $scope.$location = $location;
 
   $scope.pulseCart = function() {
+    if (!$scope.showCart) {
+      $scope.toggleCart();
+    }
+
     $('#cart-toggle').addClass('animated pulse');
     $('#cart-toggle').one(
       'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
