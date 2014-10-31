@@ -10,7 +10,7 @@ function ProductDetailController($location, $scope, $timeout, reflow) {
 
   $scope.$location = $location;
 
-  $scope.pulseCart = function() {
+  $scope.addToCart = function() {
     if (!$scope.showCart) {
       $scope.toggleCart();
     }
