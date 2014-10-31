@@ -45,16 +45,18 @@ function reflow() {
       $('.detail-header-section').css('flex-wrap', 'nowrap');
     }
 
-    if (width <= 660) {
-      $('.price-grid').css('font-size', '.7rem');
-    } else if (width <= 760) {
-      $('.price-grid').css('font-size', '.8rem');
-    } else if (width <= 860) {
+    // Calculate cell width on the fly, subtracting the padding for the inner
+    // wrapper, giving each cell 13%
+    $('tbody td').css('width', (width - 56 * 2) * 0.13);
+
+    if (width <= 690) {
       $('.price-grid').css('font-size', '.9rem');
-    } else if (width <= 960) {
+    } else if (width <= 785) {
       $('.price-grid').css('font-size', '1rem');
-    } else {
+    } else if (width <= 890) {
       $('.price-grid').css('font-size', '1.25rem');
+    } else {
+      $('.price-grid').css('font-size', '1.5rem');
     }
   };
 
