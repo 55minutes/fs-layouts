@@ -1,4 +1,4 @@
-(function (window, angular) {
+(function (window, angular, $) {
 
 'use strict';
 
@@ -9,10 +9,10 @@ angular.module('orderApp', [
 
   'productDetail',
   'productOverview',
-  'topNavBar'
 ])
 .config(configRoute)
-.config(configSnap);
+.config(configSnap)
+.controller('AppController', AppController);
 
 function configRoute($routeProvider) {
   $routeProvider.when('/', {
@@ -42,4 +42,24 @@ function configSnap(snapRemoteProvider) {
   };
 }
 
-})(window, window.angular);
+function AppController($scope) {
+  var cart = $('#cart');
+
+  $scope.showCart = false;
+
+  $scope.toggleCart = function() {
+    $scope.showCart = !$scope.showCart;
+
+    if ($scope.showCart) {
+      cart.animate({
+        minWidth: '+=320'
+      }, 300);
+    } else {
+      cart.animate({
+        minWidth: '-=320'
+      }, 300);
+    }
+  };
+}
+
+})(window, window.angular, window.jQuery);
