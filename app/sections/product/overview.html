@@ -10,7 +10,11 @@
       <img ng-src="images/products/{{ ::product.image }}" class="tile-image" />
       <p>{{ ::product.name }}</p>
       <p class="muted">{{ ::product.type }}</p>
-      <p class="muted">{{ ::product.height }}×{{ ::product.width}}</p>
+      <p class="muted">
+        <span ng-if="product.isEnvelope">Fits</span>
+        {{ ::product.height }}×{{ ::product.width}}
+        <span ng-if="product.isEnvelope">card</span>
+      </p>
     </div>
 
   </div>

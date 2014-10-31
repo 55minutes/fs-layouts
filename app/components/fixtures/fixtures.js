@@ -104,6 +104,7 @@ function fixtures() {
       image: 'envelope_a5.png',
       backgroundColor: '#853992',
       backgroundColorHover: '#666',
+      isEnvelope: true
     }, {
       name: 'Custom Envelope',
       type: 'A6',
@@ -112,6 +113,7 @@ function fixtures() {
       image: 'envelope_a6.png',
       backgroundColor: '#7322a2',
       backgroundColorHover: '#666',
+      isEnvelope: true
     }, {
       name: 'Custom Envelope',
       type: 'A7',
@@ -120,6 +122,7 @@ function fixtures() {
       image: 'envelope_a7.png',
       backgroundColor: '#6a1b9a',
       backgroundColorHover: '#666',
+      isEnvelope: true
     }, {
       name: 'Brochure',
       type: 'Flat',
@@ -138,7 +141,7 @@ function fixtures() {
       backgroundColorHover: '#666',
     }, {
       name: 'Brochure',
-      type: 'z-fold',
+      type: 'Z-fold',
       height: 8.5,
       width: 11,
       image: 'brochure_z-fold.png',
